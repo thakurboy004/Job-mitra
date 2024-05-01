@@ -6,27 +6,29 @@
     {%include 'bootstrap.html'%}
     <title>JSUF</title>
 </head>
-<body>
+<body style="background-color: rgba(231, 236, 232, 0.664);">
     {%include 'navbar.html'%}
-        <div class="bg-image" style="background : url('static\images\banner.png') no-repeat; height: 50vh; opacity: 0.5;">
-          <div class="px-4 py-5 my-5 text-center">
-            <h1 class="display-5 fw-bold">JSUF</h1>
-            <div class="col-lg-6 mx-auto">
-              <p class="lead mb-4">A free and open source job site for Modern Industries.</p>
-            </div>
+    <div style="background-color: rgba(0, 0, 0, 0.5);">
+      <div class="bg-image" style="background : url(../static/images/banner.png) ; background-position: top;background-repeat: no-repeat; background-size: cover; height: 90vh; z-index: -2;">
+        <div class="px-4 py-5 my-5 text-center">
+          <h1 class="display-5 fw-bold">JOB MITRA</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4 fw-bold">A free and open source job site for Modern Industries.</p>
           </div>
         </div>
+      </div>
+    </div>
 
       
         <hr class="featurette-divider">
 
         <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-body-secondary">It’ll blow your mind.</span></h2>
-            <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            <h2 class="featurette-heading fw-normal lh-1">You Might Find What You Seek</h2>
+            <p class="lead">Step into the world of Job Mitra, a revolutionary free and open-source job platform committed to transforming the way individuals find employment. Whether you're a seasoned professional or just starting your career journey, Job Mitra is here to empower you. Our user-friendly interface and comprehensive features make job searching a breeze, connecting you with a myriad of opportunities across industries and geographies. By harnessing the power of technology, Job Mitra ensures inclusivity and accessibility for all, breaking down barriers to entry and fostering a diverse workforce. From remote positions to on-site roles, part-time gigs to full-time careers, Job Mitra caters to every professional aspiration. Join our community-driven platform today and embark on a path to success with confidence. Together, let's redefine the job search experience and pave the way for a brighter future of work, where everyone has the opportunity to thrive.</p>
           </div>
           <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+              <img src="../static/images/Image1.jpg" alt="Job Offers" width="500" height="500" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
           </div>
         </div>
     
@@ -34,15 +36,19 @@
     
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-body-secondary">See for yourself.</span></h2>
-            <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+            <h2 class="featurette-heading fw-normal lh-1">About Us</h2>
+            <p class="lead">
+              Welcome to Job Mitra, a dynamic online platform revolutionizing the way individuals connect with employment opportunities. At Job Mitra, we believe that meaningful work should be accessible to all, regardless of background, location, or circumstance. Our mission is to empower job seekers and employers alike by providing a free and open-source platform that fosters inclusivity, transparency, and efficiency in the job market...</p>
+              <form action="{{ url_for('about')}}" method="get">
+                <button type="submit">Learn More</button>
+            </form>
           </div>
           <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="var(--bs-secondary-bg)"/><text x="50%" y="50%" fill="var(--bs-secondary-color)" dy=".3em">500x500</text></svg>
+            <img src="../static/images/Image2.jpg" alt="Job Offers" width="500" height="500" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
           </div>
         </div>
 
-        <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+        <h2 class="text-center mt-2 mb-4 mt-2">Open Positions</h2>
         <div>
             {% include 'jobitem.html' %}
         </div>
