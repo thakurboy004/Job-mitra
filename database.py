@@ -1,6 +1,5 @@
 from sqlalchemy import create_engine, text
 import os
-from .env import SQL_URL
 
 engine = create_engine(os.getenv('DATABASE_URL'))
 
@@ -17,4 +16,3 @@ def save_application_into_db(id, applicant_name, gender, explanation, resume):
         connection.execute(text("INSERT INTO applications (id, applicant_name, gender, explanation, resume) VALUES (:id, :applicant_name, :gender, :explanation, :resume)"), {'id': id, 'applicant_name': applicant_name, 'gender':gender, 'explanation': explanation, 'resume': resume})
     return "Your application is under process. We will get back to you soon."
 
-print(SQL_URL)
