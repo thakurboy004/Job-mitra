@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {%include 'bootstrap.html'%}
-    <title>JSUF</title>
+    <title>Job Mitra</title>
 </head>
 <body style="background-color: rgba(231, 236, 232, 0.664);">
     {%include 'navbar.html'%}
@@ -49,9 +49,11 @@
         </div>
 
         <h2 class="text-center mt-2 mb-4 mt-2">Open Positions</h2>
+        {% for job in jobs[:3] %}
         <div>
             {% include 'jobitem.html' %}
         </div>
+        {% endfor %}
 
               
     {%include 'footer.html'%}

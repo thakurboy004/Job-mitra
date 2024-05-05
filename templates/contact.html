@@ -1,27 +1,39 @@
 
 <div class="form-container">
   <h1>Contact Us</h1>
-    <form id="contact_form">
-        <div class="mb-3 form-row">
-            <div class="mr-3 form-col">
-                <label for="name_input">Your Name:</label>
-                <input type="text" name="name" id="name_input" placeholder="Name" />
-            </div>
-            <div class="form-col">
-                <label>Email:</label>
-                <input type="email" placeholder="name@website.com" />
-            </div>
-        </div>
-        <div class="mb-3">
-            <label>Message:</label>
-            <textarea rows="6" class="w-full border border-gray"></textarea>
-        </div>
-        <div class="mb-3">
-            <button class="btnx" type="submit">Send</button>
-        </div>
-    </form>
+  <form id="contact_form">
+    <a id="emailLink" href="#">Send Email</a>
+    <div class="mb-3 form-row">
+      <div class="mr-3 form-col">
+        <label for="name_input">Your Name:</label>
+        <input type="text" name="name" id="name_input" placeholder="Name" />
+      </div>
+      <div class="form-col">
+        <label>Email:</label>
+        <input type="email" placeholder="name@website.com" id="url"/>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label>Message:</label>
+      <textarea rows="6" class="w-full border border-gray" id="message"></textarea>
+    </div>
+    <div class="mb-3">
+      <button class="btnx" type="button" onclick="constructMailToLink()">Send</button>
+    </div>
+  </form>
 </div>
 
+<script>
+function constructMailToLink() {
+  var name = document.getElementById("name_input").value;
+  var email = document.getElementById("url").value;
+  var message = document.getElementById("message").value;
+
+  var mailtoLink = "mailto:vicky986847@gmail.com?subject=Message%20from%20Job%20Mitra%20Contact%20Us%20Form&body=Sender's%20Name:%20" + name + "%0D%0A%0D%0AEmail:%20" + email + "%0D%0A%0D%0AMessage:%20" + message;
+
+  document.getElementById("emailLink").setAttribute("href", mailtoLink);
+}
+</script>
 <style>
   /*CSS Reset code. to reset browser defaults */
 *,

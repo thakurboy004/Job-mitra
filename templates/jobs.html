@@ -7,7 +7,11 @@
   <body>
     {% include 'navbar.html' %}
     {% include 'hero.html' %}
+    <br>
+    {% for job in jobs %}
     {% include 'jobitem.html' %}
+    {% endfor %}
+    <br>
     {% include 'footer.html' %}
   </body>
 </html>

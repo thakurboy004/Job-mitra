@@ -3,20 +3,20 @@
         <title>Application Form</title>
     </head>
     <body>
-      <form action="/submit_form" method="post">
+      <form action="/apply/{{job['id']}}" method="post">
       <h1>Application Form</h1>
         <label for="full_name">Full Name:</label>
         <input type="text" id="full_name" name="full_name" required><br><br>
 
         <label for="gender">Gender:</label>
-        <select id="gender" name="gender">
+        <select id="gender" name="gender" required>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="other">Other</option>
         </select><br><br>
 
         <label for="additional_info">Additional Information:</label><br>
-        <textarea id="additional_info" name="additional_info" rows="4" cols="50"></textarea><br><br>
+        <textarea id="additional_info" name="additional_info" rows="4" cols="50" required></textarea><br><br>
 
         <label for="resume_url">Resume URL:</label>
         <input type="url" id="resume_url" name="resume_url" required><br><br>
@@ -28,6 +28,8 @@
            <span class="label">Submit</span>
           </button>
         </div>
+        <br>
+      {% include 'Apply_message.html' %}
     </form>
     </body>
 </html>
