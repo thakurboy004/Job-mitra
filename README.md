@@ -40,4 +40,4 @@ We welcome contributions from everyone! If you'd like to contribute to Job Mitra
 6. Create a pull request on the main repository.
 
 <hr>
-#### Thank you for your interest in contributing to Job Mitra! 🎉 Let's make job hunting easier together.
+<b> Thank you for your interest in contributing to Job Mitra! 🎉 Let's make job hunting easier together. </b>
