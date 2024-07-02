@@ -18,7 +18,7 @@ We welcome contributions from everyone! If you'd like to contribute to Job Mitra
 1. Fork the repository.
 2. Clone the forked repository to your local machine:
     ```git
-   git clone https://github.com/your-username/job-mitra.git
+   git clone https://github.com/thakurboy004/job-mitra.git
    ```
 
 3. Create a new branch for your feature or bug fix:
